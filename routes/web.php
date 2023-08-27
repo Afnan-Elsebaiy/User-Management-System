@@ -18,8 +18,12 @@ Route::group(['namespace' => 'App\Http\Controllers'], function()
     /**
      * Home Routes
      */
+    
+Route::get('/', function () { 
+    return view('auth.login'); 
+});
     // Route::get('/', 'HomeController@index')->name('home.index');
-    Route::get('/','ProfileController@index')->name('profile.index');
+    Route::get('/profile','ProfileController@index')->name('profile.index');
     Route::get('/profile/{id}/edit','ProfileController@edit')->name('profile.edit');
     Route::put('/profile/{id}','ProfileController@profileUpdate')->name('profile.update');
     Route::delete('/profile/{id}','ProfileController@destroy')->name('profile.destroy');

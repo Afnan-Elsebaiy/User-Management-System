@@ -13,6 +13,7 @@ class ProfileController extends Controller
     public function index()
     {
         $users = User::all();
+        // $role = User::where('role', 'Admin')->first(); 
         return view('profile.index', compact('users'));
     }
 

@@ -1,6 +1,7 @@
 @extends('layouts.auth-master')
 
 @section('content')
+<a class="btn btn-outline-info m-4" href="{{route('login.perform')}}">Sign in</a>
 <div class="container">
     <div class="card align-self-center m-auto" style="width: 40rem;">
         <div class="card-body d-flex justify-content-center ">
@@ -56,7 +57,7 @@
                         @endif
                     </div>
                 </div>
-                <button class="btn btn-primary mb-2" type="submit">Register</button>
+                <button  class="btn btn-outline-primary" type="submit">Register</button>
                 @include('auth.partials.copy')
             </form>
         </div>
